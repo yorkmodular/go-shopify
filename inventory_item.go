@@ -34,6 +34,7 @@ type InventoryItem struct {
 	HarmonizedSystemCode         string              `json:"harmonized_system_code,omitempty"`
 	CountryCodeOfOrigin          string              `json:"country_code_of_origin,omitempty"`
 	CountryHarmonizedSystemCodes []map[string]string `json:"country_harmonized_system_codes,omitempty"`
+	RequiresShipping             *bool               `json:"requires_shipping,omitempty"`
 	AdminGraphqlAPIID            string              `json:"admin_graphql_api_id,omitempty"`
 }
 
