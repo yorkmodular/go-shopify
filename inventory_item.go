@@ -25,13 +25,16 @@ type InventoryItemServiceOp struct {
 
 // InventoryItem represents a Shopify inventory item
 type InventoryItem struct {
-	ID                int64            `json:"id,omitempty"`
-	SKU               string           `json:"sku,omitempty"`
-	CreatedAt         *time.Time       `json:"created_at,omitempty"`
-	UpdatedAt         *time.Time       `json:"updated_at,omitempty"`
-	Cost              *decimal.Decimal `json:"cost,omitempty"`
-	Tracked           *bool            `json:"tracked,omitempty"`
-	AdminGraphqlAPIID string           `json:"admin_graphql_api_id,omitempty"`
+	ID                           int64               `json:"id,omitempty"`
+	SKU                          string              `json:"sku,omitempty"`
+	CreatedAt                    *time.Time          `json:"created_at,omitempty"`
+	UpdatedAt                    *time.Time          `json:"updated_at,omitempty"`
+	Cost                         *decimal.Decimal    `json:"cost,omitempty"`
+	Tracked                      *bool               `json:"tracked,omitempty"`
+	HarmonizedSystemCode         string              `json:"harmonized_system_code,omitempty"`
+	CountryCodeOfOrigin          string              `json:"country_code_of_origin,omitempty"`
+	CountryHarmonizedSystemCodes []map[string]string `json:"country_harmonized_system_codes,omitempty"`
+	AdminGraphqlAPIID            string              `json:"admin_graphql_api_id,omitempty"`
 }
 
 // InventoryItemResource is used for handling single item requests and responses
